@@ -1,0 +1,17 @@
+{
+  "name": "salemaker",
+  "version": "1.0.0",
+  "description": "Gestor de vendas com catálogo e automação WhatsApp",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --experimental-sqlite --env-file=.env server.js",
+    "dev": "node --experimental-sqlite --env-file=.env --watch server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
+    "@whiskeysockets/baileys": "^6.7.18",
+    "express": "^4.22.1",
+    "qrcode": "^1.5.4"
+  }
+}
