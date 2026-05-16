@@ -37,7 +37,22 @@
       "Bash(curl -s http://localhost:3010/api/whatsapp/status)",
       "Bash(curl -s -X POST http://localhost:3010/api/whatsapp/connect)",
       "Bash(node -e ':*)",
-      "Bash(rm -f database.db)"
+      "Bash(rm -f database.db)",
+      "Bash(npm audit *)",
+      "Bash(npm list *)",
+      "Bash(pm2 start *)",
+      "Bash(pm2 logs *)",
+      "Bash(pm2 save *)",
+      "Bash(pm2 stop *)",
+      "Bash(pm2 delete *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__select_browser",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "Bash(pm2 restart *)",
+      "Bash(pm2 show *)"
     ]
   }
 }

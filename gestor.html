@@ -807,6 +807,7 @@
   <div class="navbar-spacer"></div>
 
   <span class="wa-pill wa-disconnected" id="navWaPill" onclick="switchTab('conexao')" title="Status do WhatsApp">Desconectado</span>
+  <span id="navAlertsBadge" onclick="switchTab('conexao')" title="Alertas de preço pendentes" style="display:none; cursor:pointer; background:#e53935; color:#fff; border-radius:12px; padding:2px 9px; font-size:11px; font-weight:700; margin-left:4px;">0 alertas</span>
 
   <button class="help-btn" onclick="openOnboard()" title="Tutorial">?</button>
 
@@ -1017,11 +1018,37 @@
 
         <div style="margin-top:18px; padding:14px; background:var(--surface2); border:1px solid var(--border-soft); border-radius:10px; font-size:12px; color:var(--muted); line-height:1.6;">
           ℹ️ <strong style="color:var(--text);">Como funciona:</strong><br/>
-          Quando alguém manda mensagem pela primeira vez, o sistema responde automaticamente com o catálogo no formato selecionado. Cada contato recebe apenas uma vez — sem spam.
+          Quando alguém manda mensagem pela primeira vez, o sistema responde automaticamente com o catálogo no formato selecionado. Cada contato recebe apenas uma vez — sem spam.<br/><br/>
+          Se o cliente tiver dúvidas após receber o catálogo, a IA responde de forma humanizada. Se perguntar preço, você é notificado aqui.
         </div>
       </div>
 
     </div>
+
+    <!-- Grupo de comandos -->
+    <div class="card" style="margin-top:18px;">
+      <div class="card-title">Grupo de comandos</div>
+      <div class="card-sub">Mensagens enviadas por você nesse grupo viram comandos de estoque</div>
+      <div id="adminGroupStatus" style="margin-top:12px; font-size:13px; color:var(--muted);">Carregando...</div>
+      <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn primary" id="captureGroupBtn" onclick="captureAdminGroup()">Capturar grupo</button>
+        <button class="btn danger" id="removeGroupBtn" onclick="removeAdminGroup()" style="display:none;">Remover</button>
+      </div>
+      <div id="captureHint" style="display:none; margin-top:10px; padding:10px 14px; background:var(--surface2); border:1px solid var(--border-soft); border-radius:8px; font-size:12px; color:var(--muted); line-height:1.6;">
+        Aguardando... mande qualquer mensagem no grupo que quer registrar.
+      </div>
+    </div>
+
+    <!-- Alertas de preço -->
+    <div class="card" style="margin-top:18px;">
+      <div class="card-title" style="display:flex; align-items:center; gap:8px;">
+        🔔 Alertas de preço
+        <span id="alertsBadge" style="display:none; background:#e53935; color:#fff; border-radius:10px; padding:1px 8px; font-size:11px; font-weight:700;"></span>
+      </div>
+      <div class="card-sub">Clientes que pediram preço — responda manualmente no WhatsApp</div>
+      <div id="alertsList" style="margin-top:14px;"></div>
+    </div>
+
   </section>
 
 </div>
@@ -1083,7 +1110,11 @@ renderTable();
 renderStats();
 // Start global WA status polling (always running, drives the navbar pill)
 refreshConnStatus();
+refreshPriceAlerts();
+refreshAdminGroup();
 setInterval(refreshConnStatus, 3000);
+setInterval(refreshPriceAlerts, 15000);
+setInterval(refreshAdminGroup, 10000);
 
 // First-visit onboarding
 if (!localStorage.getItem('salemaker_onboarded')) {
@@ -1677,6 +1708,106 @@ async function loadTplSelect() {
     });
     toast('Catálogo ativo atualizado', 'success');
   };
+}
+
+async function refreshAdminGroup() {
+  let data;
+  try { data = await (await fetch('/api/admin-group')).json(); } catch { return; }
+
+  const status    = document.getElementById('adminGroupStatus');
+  const removeBtn = document.getElementById('removeGroupBtn');
+  const hint      = document.getElementById('captureHint');
+  if (!status) return;
+
+  if (data.jid) {
+    const phone = data.jid.split('@')[0].split(':')[0];
+    status.textContent = 'Grupo ativo: ' + phone;
+    status.style.color = 'var(--text)';
+    removeBtn.style.display = '';
+    hint.style.display = 'none';
+  } else {
+    status.textContent = 'Nenhum grupo configurado';
+    status.style.color = 'var(--muted)';
+    removeBtn.style.display = 'none';
+  }
+}
+
+async function captureAdminGroup() {
+  const hint = document.getElementById('captureHint');
+  const btn  = document.getElementById('captureGroupBtn');
+  await fetch('/api/admin-group/capture', { method: 'POST' });
+  hint.style.display = '';
+  btn.textContent = 'Aguardando...';
+  btn.disabled = true;
+  setTimeout(async () => {
+    btn.textContent = 'Capturar grupo';
+    btn.disabled = false;
+    hint.style.display = 'none';
+    await refreshAdminGroup();
+  }, 20000);
+  // Poll mais rápido por 20s para detectar captura
+  let polls = 0;
+  const iv = setInterval(async () => {
+    polls++;
+    const d = await (await fetch('/api/admin-group')).json();
+    if (d.jid || polls >= 20) {
+      clearInterval(iv);
+      btn.textContent = 'Capturar grupo';
+      btn.disabled = false;
+      hint.style.display = 'none';
+      await refreshAdminGroup();
+    }
+  }, 1000);
+}
+
+async function removeAdminGroup() {
+  if (!confirm('Remover grupo de comandos?')) return;
+  await fetch('/api/admin-group', { method: 'DELETE' });
+  await refreshAdminGroup();
+  toast('Grupo removido', 'success');
+}
+
+async function refreshPriceAlerts() {
+  let alerts;
+  try {
+    const res = await fetch('/api/price-alerts');
+    alerts = await res.json();
+  } catch { return; }
+
+  const badge    = document.getElementById('alertsBadge');
+  const navBadge = document.getElementById('navAlertsBadge');
+  const list     = document.getElementById('alertsList');
+  if (!list) return;
+
+  const count = alerts.length;
+  badge.style.display    = count ? '' : 'none';
+  badge.textContent      = count;
+  navBadge.style.display = count ? '' : 'none';
+  navBadge.textContent   = count === 1 ? '1 alerta' : `${count} alertas`;
+
+  if (!count) {
+    list.innerHTML = '<div style="color:var(--muted);font-size:13px;text-align:center;padding:10px 0;">Nenhum alerta pendente ✓</div>';
+    return;
+  }
+
+  list.innerHTML = alerts.map(a => {
+    const phone = a.jid.split('@')[0].split(':')[0];
+    const time  = new Date(a.created_at).toLocaleString('pt-BR');
+    return `<div style="background:var(--surface2);border:1px solid var(--border-soft);border-radius:8px;padding:10px 14px;margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+        <span style="font-weight:600;font-size:13px;">+${phone}</span>
+        <span style="font-size:11px;color:var(--muted);">${time}</span>
+      </div>
+      <div style="font-size:13px;margin-bottom:10px;color:var(--text);">"${a.message}"</div>
+      <button class="btn" style="font-size:12px;padding:4px 14px;" onclick="markAlertHandled(${a.id})">✓ Atendido</button>
+    </div>`;
+  }).join('');
+}
+
+async function markAlertHandled(id) {
+  await fetch(`/api/price-alerts/${id}/handled`, { method: 'PATCH' });
+  await refreshPriceAlerts();
+  toast('Alerta marcado como atendido', 'success');
 }
 
 async function refreshConnStatus() {

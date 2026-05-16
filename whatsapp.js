@@ -1,4 +1,4 @@
-import makeWASocket, { useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } from '@whiskeysockets/baileys';
+import makeWASocket, { useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, downloadMediaMessage } from '@whiskeysockets/baileys';
 import qrcode from 'qrcode';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -14,6 +14,13 @@ let connectedPhone = null;
 let onMessageHandler = null;
 let dbRef = null;
 let manualDisconnect = false;
+let adminGroupJid = null;
+let groupCaptureCallback = null;
+const sentByBot = new Set();
+
+export function setAdminGroupJid(jid) { adminGroupJid = jid; }
+export function startGroupCapture(callback) { groupCaptureCallback = callback; }
+export function getAdminGroupJid() { return adminGroupJid; }
 
 function setStatus(s) { connectionStatus = s; }
 
@@ -35,7 +42,7 @@ async function getWAVersion() {
   }
 }
 
-export async function connectWhatsApp(onMessage, db) {
+export async function connectWhatsApp(onMessage, db, onAdminMessage = null) {
   if (sock) return;
   onMessageHandler = onMessage;
   dbRef = db;
@@ -98,25 +105,86 @@ export async function connectWhatsApp(onMessage, db) {
   });
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
-    if (type !== 'notify') return;
-    for (const msg of messages) {
-      if (msg.key.fromMe) continue;
-      const jid = msg.key.remoteJid;
-      if (!jid || jid.endsWith('@g.us') || jid.endsWith('@broadcast') || jid === 'status@broadcast') continue;
+    const selfJid = sock.user?.id
+      ? sock.user.id.split(':')[0] + '@s.whatsapp.net'
+      : null;
+    const isNotify = type === 'notify';
 
-      // Extrai texto da mensagem
+    for (const msg of messages) {
+      const jid = msg.key.remoteJid;
+      if (!jid || jid.endsWith('@broadcast') || jid === 'status@broadcast') continue;
+
+      // Grupo de comandos admin (aceita notify e append — celular manda como append)
+      if (jid.endsWith('@g.us')) {
+        const messageText = msg.message?.conversation || msg.message?.extendedTextMessage?.text || '';
+        const hasImage = !!msg.message?.imageMessage;
+        const hasAudio = !!msg.message?.audioMessage;
+        if (!messageText.trim() && !hasImage && !hasAudio) continue;
+
+        if (groupCaptureCallback) {
+          const cb = groupCaptureCallback;
+          groupCaptureCallback = null;
+          cb(jid);
+          continue;
+        }
+
+        if (adminGroupJid && jid === adminGroupJid && onAdminMessage) {
+          if (sentByBot.has(msg.key.id)) { sentByBot.delete(msg.key.id); continue; }
+          try {
+            let reply;
+            if (hasImage) {
+              console.log('WA admin grupo: [imagem]');
+              const buffer = await downloadMediaMessage(msg, 'buffer', {}, { reuploadRequest: sock.updateMediaMessage });
+              reply = await onAdminMessage('', buffer, null);
+            } else if (hasAudio) {
+              console.log('WA admin grupo: [audio]');
+              const buffer = await downloadMediaMessage(msg, 'buffer', {}, { reuploadRequest: sock.updateMediaMessage });
+              reply = await onAdminMessage('', null, buffer);
+            } else {
+              console.log(`WA admin grupo: "${messageText}"`);
+              reply = await onAdminMessage(messageText);
+            }
+            if (reply && sock) {
+              const sent = await sock.sendMessage(jid, { text: reply });
+              if (sent?.key?.id) sentByBot.add(sent.key.id);
+            }
+          } catch (e) { console.error('WA group admin error:', e.message); }
+        }
+        continue;
+      }
+
+      // Mensagens de clientes: só processa notify
+      if (!isNotify) continue;
+
       const messageText =
         msg.message?.conversation ||
         msg.message?.extendedTextMessage?.text ||
         '';
 
-      if (!messageText.trim()) continue; // Ignora imagens, áudios, etc.
+      if (!messageText.trim()) continue;
+
+      // Mensagem do próprio usuário para si mesmo = comando admin
+      if (msg.key.fromMe && selfJid && jid === selfJid) {
+        if (onAdminMessage) {
+          try {
+            const reply = await onAdminMessage(messageText);
+            if (reply && sock) {
+              await sock.sendMessage(jid, { text: reply });
+            }
+          } catch (e) {
+            console.error('WA admin error:', e.message);
+          }
+        }
+        continue;
+      }
+
+      if (msg.key.fromMe) continue;
 
       try {
         const text = await onMessageHandler(messageText, jid);
         if (text && sock) {
           await sock.sendMessage(jid, { text });
-          console.log('Catálogo enviado para', jid);
+          console.log('Mensagem enviada para', jid);
         }
       } catch (e) {
         console.error('WA handler error:', e.message);

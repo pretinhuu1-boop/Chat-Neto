@@ -4,11 +4,18 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import Anthropic from '@anthropic-ai/sdk';
-import { connectWhatsApp, disconnectWhatsApp, getStatus } from './whatsapp.js';
-
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+import { connectWhatsApp, disconnectWhatsApp, getStatus, setAdminGroupJid, startGroupCapture, getAdminGroupJid } from './whatsapp.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+try {
+  readFileSync(join(__dirname, '.env'), 'utf8').split('\n').forEach(line => {
+    const m = line.match(/^([^#=\s]+)\s*=\s*(.+)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim();
+  });
+} catch {}
+
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const PORT = 3011;
 
 // ── DATABASE ──────────────────────────────────────────────────────────────────
@@ -51,6 +58,21 @@ db.exec(`
     sent_at      DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 
+  CREATE TABLE IF NOT EXISTS wa_price_alerts (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    jid        TEXT    NOT NULL,
+    message    TEXT    NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    handled    INTEGER DEFAULT 0
+  );
+
+  CREATE TABLE IF NOT EXISTS wa_conversation_state (
+    jid          TEXT PRIMARY KEY,
+    state        TEXT NOT NULL,
+    catalog_type TEXT,
+    updated_at   DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
   CREATE TABLE IF NOT EXISTS catalog_templates (
     id           INTEGER PRIMARY KEY AUTOINCREMENT,
     name         TEXT NOT NULL DEFAULT 'Modelo',
@@ -64,6 +86,10 @@ db.exec(`
 
 db.prepare(`INSERT OR IGNORE INTO config (key, value) VALUES ('cambio', '5.50')`).run();
 db.prepare(`INSERT OR IGNORE INTO config (key, value) VALUES ('margem', '100')`).run();
+
+// Carrega grupo admin salvo
+const savedGroup = db.prepare(`SELECT value FROM config WHERE key = 'admin_group_jid'`).get();
+if (savedGroup?.value) setAdminGroupJid(savedGroup.value);
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 
@@ -170,6 +196,43 @@ function recordUsage(inputTokens, outputTokens) {
   `).run(todayDate(), costUsd);
 }
 
+// ── ESTADO DA CONVERSA ────────────────────────────────────────────────────────
+
+function getConversationState(jid) {
+  return db.prepare(`
+    SELECT state, catalog_type FROM wa_conversation_state
+    WHERE jid = ? AND updated_at > datetime('now', '-24 hours')
+  `).get(jid);
+}
+
+function setConversationState(jid, state, catalogType = null) {
+  db.prepare(`
+    INSERT INTO wa_conversation_state (jid, state, catalog_type, updated_at)
+    VALUES (?, ?, ?, CURRENT_TIMESTAMP)
+    ON CONFLICT(jid) DO UPDATE SET state=excluded.state, catalog_type=excluded.catalog_type, updated_at=CURRENT_TIMESTAMP
+  `).run(jid, state, catalogType);
+}
+
+function clearConversationState(jid) {
+  db.prepare('DELETE FROM wa_conversation_state WHERE jid = ?').run(jid);
+}
+
+function isAffirmative(text) {
+  return /^\s*(sim|s|pode|claro|quero|manda|vai|ok|yes|yep|pode sim|quero sim|manda sim|manda aí|manda ai|com certeza|positivo|afirmativo|por favor|por fa|pf)\s*[!.]*\s*$/i.test(text.trim());
+}
+
+function getConfirmationQuestion(catalogType) {
+  return catalogType === 'pods'
+    ? 'oi, quer lista dos modelos disponíveis?'
+    : 'oi, quer lista dos peptídeos disponíveis?';
+}
+
+// ── DETECÇÃO DE PERGUNTA DE PREÇO ─────────────────────────────────────────────
+
+function isAskingForPrice(text) {
+  return /pre[çc]o|valor(es)?|quanto (custa|fica|é|e|vale|cobr)|custo|promoç|desconto|tabela|me.{0,15}valor|me.{0,15}pre[çc]|quanto é|quanto e\b/i.test(text);
+}
+
 // ── CLASSIFICAÇÃO COM IA ──────────────────────────────────────────────────────
 
 async function classifyMessage(text) {
@@ -210,40 +273,273 @@ Na dúvida, responda "none". Seja conservador.`,
   }
 }
 
+// ── RESPOSTA HUMANIZADA ───────────────────────────────────────────────────────
+
+async function generateHumanizedResponse(messageText, catalogType) {
+  const spent = getDailySpendBRL();
+  if (spent >= DAILY_LIMIT_BRL) {
+    console.log('WA: limite diário atingido — resposta humanizada pausada');
+    return null;
+  }
+
+  const context = catalogType === 'pods'
+    ? 'Você vende pods e vapes eletrônicos descartáveis (marcas: ELF BAR, BLACK SHEEP, IGNITE, LOST MARY, WAKA, VAPORESSO e outras). Já enviou a lista de produtos disponíveis para o cliente.'
+    : 'Você vende peptídeos terapêuticos (Retatrutide, Tirzepatide, BPC-157, TB500, MOTS-C, CJC-1295, Epithalon, Semax). Já enviou o catálogo. Valores são tratados diretamente.';
+
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5',
+      max_tokens: 120,
+      system: `Você é um vendedor brasileiro que atende pelo WhatsApp. ${context}
+
+Responda em 1 frase curta, casual, sem formalidade — como se fosse uma mensagem rápida mesmo.
+Sem emojis. Sem "olá", "tudo bem", introduções. Va direto ao ponto.
+Nunca mencione preços ou valores.
+Se a mensagem não tiver nada a ver com os produtos, responda apenas: SKIP`,
+      messages: [{ role: 'user', content: messageText }],
+    });
+
+    recordUsage(response.usage.input_tokens, response.usage.output_tokens);
+    const reply = response.content[0].text.trim();
+    return reply === 'SKIP' ? null : reply;
+  } catch (e) {
+    console.error('Claude humanized error:', e.message);
+    return null;
+  }
+}
+
+// ── HANDLER ADMIN (mensagens do próprio vendedor para si mesmo) ───────────────
+
+async function parseAdminCommand(text) {
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5',
+      max_tokens: 200,
+      system: `Você interpreta comandos de gestão de estoque em português e retorna JSON válido.
+
+Formatos possíveis (retorne APENAS o JSON, sem markdown):
+{"action":"stock","search":"[nome ou sabor]","delta":N}      — atualiza quantidade (N pode ser negativo)
+{"action":"add","brand":"...","flavor":"...","price":N,"stock":N}  — adiciona produto
+{"action":"low_stock"}   — lista produtos com estoque baixo (≤5)
+{"action":"list"}        — lista todos os produtos disponíveis
+{"action":"unknown","message":"..."}   — comando não reconhecido
+
+Exemplos:
+"chegou 20 mango" → {"action":"stock","search":"mango","delta":20}
+"vendeu 3 elf bar manga" → {"action":"stock","search":"elf bar manga","delta":-3}
+"acabou o blue razz" → {"action":"stock","search":"blue razz","delta":-9999}
+"add BLACK SHEEP | Morango | 25.90 | 10" → {"action":"add","brand":"BLACK SHEEP","flavor":"Morango","price":25.90,"stock":10}
+"quais tão acabando" → {"action":"low_stock"}
+"lista" ou "estoque" → {"action":"list"}`,
+      messages: [{ role: 'user', content: text }],
+    });
+    const raw = response.content[0].text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
+    return JSON.parse(raw);
+  } catch (e) {
+    console.error('Admin parse error:', e.message);
+    return { action: 'unknown', message: 'Não entendi o comando.' };
+  }
+}
+
+async function transcribeAudio(audioBuffer) {
+  const formData = new FormData();
+  formData.append('file', new Blob([audioBuffer], { type: 'audio/ogg' }), 'audio.ogg');
+  formData.append('model', 'whisper-large-v3-turbo');
+  formData.append('language', 'pt');
+
+  const res = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
+    body: formData,
+  });
+  if (!res.ok) throw new Error(`Groq ${res.status}`);
+  const data = await res.json();
+  return data.text?.trim() || '';
+}
+
+function detectMimeType(buffer) {
+  if (buffer[0] === 0xFF && buffer[1] === 0xD8) return 'image/jpeg';
+  if (buffer[0] === 0x89 && buffer[1] === 0x50) return 'image/png';
+  if (buffer[0] === 0x52 && buffer[1] === 0x49) return 'image/webp';
+  return 'image/jpeg';
+}
+
+async function parseImageProducts(imageBuffer) {
+  try {
+    if (!imageBuffer || imageBuffer.length === 0) return 'Imagem vazia ou nao baixada.';
+    console.log(`Image parse: buffer ${imageBuffer.length} bytes`);
+    const mimeType = detectMimeType(imageBuffer);
+    const base64 = imageBuffer.toString('base64');
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5',
+      max_tokens: 800,
+      messages: [{
+        role: 'user',
+        content: [
+          { type: 'image', source: { type: 'base64', media_type: mimeType, data: base64 } },
+          { type: 'text', text: `Leia todos os produtos nesta imagem e retorne APENAS JSON valido sem markdown:
+{"action":"bulk_add","products":[{"brand":"...","flavor":"...","price":N,"stock":N},...]}
+
+Se nao conseguir identificar nenhum produto, retorne:
+{"action":"unknown","message":"Nao consegui ler a lista"}
+
+Regras: brand=marca do produto, flavor=sabor ou nome do produto, price=preco numerico (0 se nao visivel), stock=quantidade numerica (0 se nao visivel). Leia cada linha da lista.` }
+        ]
+      }]
+    });
+    recordUsage(response.usage.input_tokens, response.usage.output_tokens);
+    const rawText = response.content[0]?.text?.trim() || '';
+    console.log(`Image parse raw: ${rawText.slice(0, 200)}`);
+    const raw = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
+    if (!raw) return 'Claude nao retornou resposta para a imagem.';
+    const cmd = JSON.parse(raw);
+
+    if (cmd.action === 'bulk_add' && cmd.products?.length) {
+      const added = [];
+      for (const p of cmd.products) {
+        const name = `${p.brand || ''} ${p.flavor || ''}`.trim();
+        if (!name) continue;
+        db.prepare('INSERT INTO products (name, brand, flavor, price, stock) VALUES (?, ?, ?, ?, ?)')
+          .run(name, p.brand || '', p.flavor || name, p.price || 0, p.stock || 0);
+        added.push(`• ${name} — R$ ${(p.price || 0).toFixed(2)} — ${p.stock || 0} un`);
+      }
+      return `${added.length} produto(s) adicionado(s):\n${added.join('\n')}`;
+    }
+
+    return cmd.message || 'Nao consegui ler a lista.';
+  } catch (e) {
+    console.error('Image parse error:', e.message);
+    return 'Erro ao processar a imagem.';
+  }
+}
+
+async function waAdminHandler(messageText, imageBuffer = null, audioBuffer = null) {
+  if (imageBuffer) return await parseImageProducts(imageBuffer);
+  if (audioBuffer) {
+    try {
+      const transcribed = await transcribeAudio(audioBuffer);
+      console.log(`WA admin audio transcrito: "${transcribed}"`);
+      if (!transcribed) return 'Nao consegui entender o audio.';
+      messageText = transcribed;
+    } catch (e) {
+      console.error('Transcription error:', e.message);
+      return 'Erro ao transcrever o audio.';
+    }
+  }
+  const cmd = await parseAdminCommand(messageText);
+
+  if (cmd.action === 'stock') {
+    const products = db.prepare(
+      `SELECT id, name, flavor, stock FROM products WHERE (LOWER(name) LIKE ? OR LOWER(flavor) LIKE ?) AND stock >= 0`
+    ).all(`%${cmd.search.toLowerCase()}%`, `%${cmd.search.toLowerCase()}%`);
+
+    if (!products.length) return `❌ Nenhum produto encontrado para "${cmd.search}".`;
+
+    const updated = [];
+    for (const p of products) {
+      const newStock = Math.max(0, p.stock + cmd.delta);
+      db.prepare('UPDATE products SET stock = ? WHERE id = ?').run(newStock, p.id);
+      updated.push(`• ${p.flavor || p.name}: ${p.stock} → *${newStock}*`);
+    }
+    const acao = cmd.delta > 0 ? `+${cmd.delta}` : `${cmd.delta}`;
+    return `Estoque atualizado (${acao}):\n${updated.join('\n')}`;
+  }
+
+  if (cmd.action === 'add') {
+    const price = cmd.price > 0 ? cmd.price : 0;
+    const name = `${cmd.brand} ${cmd.flavor}`.trim();
+    db.prepare(
+      'INSERT INTO products (name, brand, flavor, price, stock) VALUES (?, ?, ?, ?, ?)'
+    ).run(name, cmd.brand || '', cmd.flavor || name, price, cmd.stock || 0);
+    return `Produto adicionado:\n• *${name}*\n• Preco: R$ ${price.toFixed(2)}\n• Estoque: ${cmd.stock || 0} un.`;
+  }
+
+  if (cmd.action === 'low_stock') {
+    const products = db.prepare(
+      'SELECT name, flavor, stock FROM products WHERE stock <= 5 ORDER BY stock ASC'
+    ).all();
+    if (!products.length) return 'Nenhum produto com estoque baixo.';
+    const lines = products.map(p => `• ${p.flavor || p.name}: *${p.stock}* un.`);
+    return `*Estoque baixo (5 ou menos):*\n${lines.join('\n')}`;
+  }
+
+  if (cmd.action === 'list') {
+    const products = db.prepare(
+      'SELECT flavor, name, stock FROM products WHERE stock > 0 ORDER BY brand, flavor'
+    ).all();
+    if (!products.length) return 'Nenhum produto em estoque.';
+    const lines = products.map(p => `• ${p.flavor || p.name}: ${p.stock} un.`);
+    return `*Estoque atual:*\n${lines.join('\n')}`;
+  }
+
+  return `${cmd.message || 'Comando nao reconhecido.'}\n\nExemplos:\n• "chegou 20 mango"\n• "vendeu 3 elf bar manga"\n• "add BLACK SHEEP | Morango | 25.90 | 10"\n• "lista" ou "quais tao acabando"`;
+}
+
 // ── HANDLER PRINCIPAL DO WHATSAPP ─────────────────────────────────────────────
 
 async function waMessageHandler(messageText, jid) {
-  // 1. Classifica com IA
+  // ── 1. Aguardando confirmação do cliente ──────────────────────────────────
+  const convState = getConversationState(jid);
+
+  if (convState?.state === 'awaiting_confirmation') {
+    if (isAffirmative(messageText)) {
+      // Cliente confirmou — manda o catálogo
+      const { catalog_type } = convState;
+      clearConversationState(jid);
+
+      let catalogText = null;
+      if (catalog_type === 'pods') {
+        const cfg = getConfig();
+        const tplId = cfg.wa_template_id ? parseInt(cfg.wa_template_id) : null;
+        catalogText = tplId ? generateCatalog(tplId) : null;
+      } else if (catalog_type === 'peptideos') {
+        catalogText = getPeptidesCatalog();
+      }
+
+      if (!catalogText) return null;
+      db.prepare('INSERT INTO wa_catalog_sent (jid, catalog_type) VALUES (?, ?)').run(jid, catalog_type);
+      console.log(`WA [${jid}] confirmou → catálogo "${catalog_type}" enviado`);
+      return catalogText;
+    } else {
+      // Não confirmou — para tudo
+      clearConversationState(jid);
+      console.log(`WA [${jid}] não confirmou → encerrando`);
+      return null;
+    }
+  }
+
+  // ── 2. Follow-up: já recebeu catálogo nos últimos 7 dias ─────────────────
+  const lastCatalog = db.prepare(`
+    SELECT catalog_type FROM wa_catalog_sent
+    WHERE jid = ? AND sent_at > datetime('now', '-7 days')
+    ORDER BY sent_at DESC LIMIT 1
+  `).get(jid);
+
+  if (lastCatalog) {
+    if (isAskingForPrice(messageText)) {
+      const jaTemAlerta = db.prepare(
+        'SELECT 1 FROM wa_price_alerts WHERE jid = ? AND handled = 0'
+      ).get(jid);
+      if (!jaTemAlerta) {
+        db.prepare('INSERT INTO wa_price_alerts (jid, message) VALUES (?, ?)').run(jid, messageText);
+      }
+      console.log(`WA [${jid}] perguntou preço → alerta criado para vendedor`);
+      return null;
+    }
+
+    const reply = await generateHumanizedResponse(messageText, lastCatalog.catalog_type);
+    if (reply) console.log(`WA [${jid}] follow-up → respondendo humanizado`);
+    return reply;
+  }
+
+  // ── 3. Novo contato — classifica e pergunta se quer a lista ──────────────
   const action = await classifyMessage(messageText);
   console.log(`WA [${jid}] "${messageText}" → ${action}`);
   if (action === 'none') return null;
 
-  // 2. Verifica se já enviou esse catálogo pra esse contato nas últimas 24h
-  const recentlySent = db.prepare(`
-    SELECT 1 FROM wa_catalog_sent
-    WHERE jid = ? AND catalog_type = ?
-    AND sent_at > datetime('now', '-24 hours')
-  `).get(jid, action);
-  if (recentlySent) {
-    console.log(`WA [${jid}] catálogo "${action}" já enviado recentemente — ignorando`);
-    return null;
-  }
-
-  // 3. Gera o catálogo correto
-  let catalogText = null;
-  if (action === 'pods') {
-    const cfg = getConfig();
-    const tplId = cfg.wa_template_id ? parseInt(cfg.wa_template_id) : null;
-    catalogText = tplId ? generateCatalog(tplId) : null;
-  } else if (action === 'peptideos') {
-    catalogText = getPeptidesCatalog();
-  }
-
-  if (!catalogText) return null;
-
-  // 4. Registra envio
-  db.prepare('INSERT INTO wa_catalog_sent (jid, catalog_type) VALUES (?, ?)').run(jid, action);
-  return catalogText;
+  setConversationState(jid, 'awaiting_confirmation', action);
+  console.log(`WA [${jid}] → perguntando confirmação para "${action}"`);
+  return getConfirmationQuestion(action);
 }
 
 // ── EXPRESS ───────────────────────────────────────────────────────────────────
@@ -434,6 +730,42 @@ app.get('/api/catalog', (req, res) => {
   res.json({ text });
 });
 
+// ── PRICE ALERTS ─────────────────────────────────────────────────────────────
+
+app.get('/api/price-alerts', (req, res) => {
+  res.json(db.prepare(
+    'SELECT * FROM wa_price_alerts WHERE handled = 0 ORDER BY created_at DESC'
+  ).all());
+});
+
+app.patch('/api/price-alerts/:id/handled', (req, res) => {
+  db.prepare('UPDATE wa_price_alerts SET handled = 1 WHERE id = ?').run(parseInt(req.params.id));
+  res.json({ ok: true });
+});
+
+// ── ADMIN GROUP ───────────────────────────────────────────────────────────────
+
+app.get('/api/admin-group', (req, res) => {
+  const jid = getAdminGroupJid();
+  res.json({ jid: jid || null });
+});
+
+app.post('/api/admin-group/capture', (req, res) => {
+  if (!getStatus().status === 'connected') return res.status(400).json({ error: 'WhatsApp desconectado' });
+  startGroupCapture((jid) => {
+    db.prepare(`INSERT OR REPLACE INTO config (key, value) VALUES ('admin_group_jid', ?)`).run(jid);
+    setAdminGroupJid(jid);
+    console.log('Grupo admin capturado:', jid);
+  });
+  res.json({ ok: true });
+});
+
+app.delete('/api/admin-group', (req, res) => {
+  db.prepare(`DELETE FROM config WHERE key = 'admin_group_jid'`).run();
+  setAdminGroupJid(null);
+  res.json({ ok: true });
+});
+
 // ── WHATSAPP ──────────────────────────────────────────────────────────────────
 
 app.get('/api/whatsapp/status', (req, res) => {
@@ -442,7 +774,7 @@ app.get('/api/whatsapp/status', (req, res) => {
 
 app.post('/api/whatsapp/connect', async (req, res) => {
   try {
-    await connectWhatsApp(waMessageHandler, db);
+    await connectWhatsApp(waMessageHandler, db, waAdminHandler);
     res.json({ ok: true });
   } catch (e) {
     res.status(500).json({ error: e.message });

@@ -1,0 +1,522 @@
+2026-05-03 20:00:43: (node:5204) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 20:00:43: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 20:11:47: (node:10924) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 20:11:47: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 20:12:35: (node:21456) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 20:12:35: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:20:20: (node:17268) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:20:20: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:27:20: (node:19300) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:27:20: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:31:15: (node:20356) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:31:15: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:37:07: Claude classify error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:40:22: (node:5404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:40:22: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:43:45: (node:11588) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:43:45: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:45:54: (node:20100) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:45:54: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:50:31: (node:18620) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:50:31: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:55:45: (node:19300) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:55:45: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:58:47: (node:7204) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 21:58:47: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 21:59:26: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:28: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:28: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:29: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:29: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:29: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:30: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:30: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:30: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:30: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:31: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:31: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:31: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:32: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:32: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:32: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:33: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:33: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:33: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:34: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:34: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:34: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:34: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:35: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:35: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:35: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:36: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:36: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:37: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:37: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:37: Admin parse error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-05-03 21:59:37: WA group admin error: rate-overlimit
+2026-05-03 22:00:47: (node:20400) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:00:47: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:01:15: (node:20568) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:01:15: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:05:44: (node:10360) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:05:44: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:07:20: Admin parse error: Unexpected token '`', "```json
+2026-05-03 22:07:20: {""... is not valid JSON
+2026-05-03 22:08:23: (node:18964) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:08:23: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:09:27: Admin parse error: Unexpected token 'E', "Entendi qu"... is not valid JSON
+2026-05-03 22:13:25: (node:21448) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:13:25: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:14:58: (node:9900) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:14:58: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:16:30: Image parse error: Unexpected end of JSON input
+2026-05-03 22:17:56: (node:21812) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-03 22:17:56: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-05-03 22:22:26: Decrypted message with closed session.
+2026-05-03 22:22:27: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CageqbJ53UiQ9tvyVF9fh"}
+2026-05-03 22:22:39: Decrypted message with closed session.
+2026-05-03 22:22:40: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CagerZLXcp3eNyJmCFsr6"}
+2026-05-04 01:01:26: Decrypted message with closed session.
+2026-05-04 07:51:52: Failed to decrypt message with any known session...
+2026-05-04 07:51:52: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 07:51:52:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 07:51:52:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 07:51:52:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 07:51:52:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 07:51:52:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 07:51:58: Failed to decrypt message with any known session...
+2026-05-04 07:51:58: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 07:51:58:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 07:51:58:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 07:51:58:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 07:51:58:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 07:51:58:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 07:51:58: Failed to decrypt message with any known session...
+2026-05-04 07:51:58: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 07:51:58:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 07:51:58:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 07:51:58:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 07:51:58:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 07:51:58:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 07:51:59: Closing open session in favor of incoming prekey bundle
+2026-05-04 11:02:57: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaheqAeFZY7L5EVoZZxvf"}
+2026-05-04 11:03:08: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaheqzNeV6xUyayUmSUL7"}
+2026-05-04 12:33:34: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cahmjx39g6E8o7FzNuE4X"}
+2026-05-04 12:34:31: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cahmp6rq331xwyNrvkLTK"}
+2026-05-04 12:34:38: Failed to decrypt message with any known session...
+2026-05-04 12:34:38: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:38:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:38:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:38:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:38:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:38:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:38: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:38:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:38:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:38:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:38:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:38:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:40: Failed to decrypt message with any known session...
+2026-05-04 12:34:40: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:40:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:40:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:40:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:40:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:40:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:40: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:40:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:40:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:40:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:40:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:40:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:43: Failed to decrypt message with any known session...
+2026-05-04 12:34:43: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:43:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:43:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:43:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:43:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:43:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:43: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:43:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:43:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:43:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:43:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:43:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Failed to decrypt message with any known session...
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Failed to decrypt message with any known session...
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Failed to decrypt message with any known session...
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:49: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-04 12:34:49:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-04 12:34:49:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-04 12:34:49:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-04 12:34:49:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-04 12:34:49:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-04 12:34:51: Closing open session in favor of incoming prekey bundle
+2026-05-04 14:39:38: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CahwMUgf2GM2dhHQ83WUo"}
+2026-05-04 15:45:43: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cai2PncJjYJ1RLCAga67E"}
+2026-05-04 15:45:50: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cai2QGcY9TW1To9TdrRqf"}
+2026-05-04 15:46:09: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cai2RiamMd1wDFXaY9TXN"}
+2026-05-05 02:51:55: Failed to decrypt message with any known session...
+2026-05-05 02:51:55: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:51:55:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:51:55:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:51:55:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:51:55:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:51:55:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:51:55: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:51:55:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:51:55:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:51:55:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:51:55:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:51:55:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:51:55: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:51:55:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:51:55:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:51:55:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:51:55:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:51:55:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Failed to decrypt message with any known session...
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Failed to decrypt message with any known session...
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:01: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 02:52:01:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 02:52:01:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 02:52:01:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 02:52:01:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 02:52:01:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 02:52:02: Closing open session in favor of incoming prekey bundle
+2026-05-05 11:04:58: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajYnrfXCE6RvSL5YYAsJ"}
+2026-05-05 11:30:12: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajaiWK2qTGbTwUfN2cNa"}
+2026-05-05 11:30:16: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajainDkLwPQmBDryitkm"}
+2026-05-05 11:30:27: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajajdMiwcQAn5mvw7Pzs"}
+2026-05-05 11:30:31: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajajvPevyc2siMod4kaU"}
+2026-05-05 11:30:35: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajakD5Fp5njkzTfiSjFA"}
+2026-05-05 11:31:06: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajanSE5Runoqc3ypJS4y"}
+2026-05-05 11:31:10: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cajanj47AnhqdTF864t5Q"}
+2026-05-05 11:31:12: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajanwLY7BgnfVbWgkQED"}
+2026-05-05 11:31:19: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajaoQ48jjEUDUDRLN9bk"}
+2026-05-05 11:31:52: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajaqtUyJn52A4x1CGGVj"}
+2026-05-05 11:32:04: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cajarmez928dqsX1qNkVQ"}
+2026-05-05 11:32:06: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajarrmpKkCyKUc4KJ4y9"}
+2026-05-05 11:34:42: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cajb4My3NACqpp8qmdMyb"}
+2026-05-05 11:34:47: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cajb4nqm7UXcfEkW8PhEY"}
+2026-05-05 11:34:57: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cajb5WiRoEUCEVQsghMWc"}
+2026-05-05 13:28:16: Decrypted message with closed session.
+2026-05-05 14:41:10: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajqH5wsRrtac9oRpWhwH"}
+2026-05-05 14:41:12: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajqHE52XQiyAZkE8CwyP"}
+2026-05-05 14:41:16: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajqHWC98L53RnXDcQzAX"}
+2026-05-05 15:23:33: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajtWYNKVMu7F8ohrCYqa"}
+2026-05-05 15:34:36: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CajuMRN16dtBE4fXiAu35"}
+2026-05-05 17:47:00: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cak5SyVqcy9aQQfogwLA3"}
+2026-05-05 17:47:01: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cak5T6JcWpXGwADpdUB4Z"}
+2026-05-05 17:47:03: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cak5TEcfxoMivu5VFMV3L"}
+2026-05-05 20:58:11: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CakL2WzUFhf8MAQzYqmzf"}
+2026-05-05 21:42:45: Decrypted message with closed session.
+2026-05-05 23:54:56: Failed to decrypt message with any known session...
+2026-05-05 23:54:56: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:54:56:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:54:56:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:54:56:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:54:56:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:54:56:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:54:56: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:54:56:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:54:56:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:54:56:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:54:56:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:54:56:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:54:56: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:54:56:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:54:56:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:54:56:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:54:56:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:54:56:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:54:56: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:54:56:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:54:56:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:54:56:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:54:56:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:54:56:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:55:21: Failed to decrypt message with any known session...
+2026-05-05 23:55:21: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:55:21:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:55:21:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:55:21:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:55:21:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:55:21:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:55:21: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:55:21:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:55:21:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:55:21:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:55:21:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:55:21:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:55:21: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:55:21:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:55:21:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:55:21:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:55:21:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:55:21:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-05 23:55:21: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-05 23:55:21:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-05 23:55:21:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-05 23:55:21:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-05 23:55:21:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-05 23:55:21:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 00:31:46: Failed to decrypt message with any known session...
+2026-05-06 00:31:46: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 00:31:46:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 00:31:46:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 00:31:46:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 00:31:46:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 00:31:46:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 00:31:46: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 00:31:46:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 00:31:46:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 00:31:46:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 00:31:46:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 00:31:46:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 00:31:46: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 00:31:46:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 00:31:46:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 00:31:46:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 00:31:46:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 00:31:46:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 00:31:46: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 00:31:46:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 00:31:46:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 00:31:46:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 00:31:46:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 00:31:46:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 00:31:46: Closing open session in favor of incoming prekey bundle
+2026-05-06 01:38:39: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CakhR1gBvd2fYXKAhvVoy"}
+2026-05-06 02:22:57: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cakknwj2ADZWLxRk8aJjQ"}
+2026-05-06 08:39:54: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamFY7VcC2UEzFjwGztqD"}
+2026-05-06 10:06:00: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamN6thY4t7AGJvB1DE5w"}
+2026-05-06 10:06:14: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamN7uKWpFVUZQMh5V5q6"}
+2026-05-06 10:06:18: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamN8FK3tQJVbwipsYFQ2"}
+2026-05-06 10:06:48: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamNASZH7xBEqBRsGs8NQ"}
+2026-05-06 11:18:38: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamTe82AtrPytbeqSZRJn"}
+2026-05-06 11:19:19: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamThBZL7cmcPRT2irDvV"}
+2026-05-06 11:31:46: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamUeEUyhSuAJcH2FhrLQ"}
+2026-05-06 11:31:50: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamUeYXvk3iCscG5qcDLz"}
+2026-05-06 11:32:04: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamUfYi85bcFCtsGjeJ6J"}
+2026-05-06 12:20:38: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamYNLhoRRYjNjs4BBrhb"}
+2026-05-06 12:26:51: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamYqqdbzRdGxBziDazaR"}
+2026-05-06 13:33:39: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CamdwG6EkdrV5HkJeNTVN"}
+2026-05-06 13:38:51: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CameLKv4noCq3sLtxP8z8"}
+2026-05-06 13:38:52: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CameLKoNM5PBkZ1NzGXM8"}
+2026-05-06 13:38:52: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CameLMMdsPXaeGSC3Fjr2"}
+2026-05-06 13:38:52: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CameLNDyHp9M35RtE5Pwj"}
+2026-05-06 15:16:20: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CammmQBZ7YV5yEc2sENhi"}
+2026-05-06 18:24:14: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Can26UuUejazMeB5sbvWB"}
+2026-05-06 18:56:59: Failed to decrypt message with any known session...
+2026-05-06 18:56:59: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:56:59:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:56:59:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:56:59:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:56:59:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:56:59:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:56:59: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:56:59:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:56:59:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:56:59:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:56:59:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:56:59:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:56:59: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:56:59:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:56:59:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:56:59:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:56:59:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:56:59:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:56:59: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:56:59:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:56:59:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:56:59:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:56:59:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:56:59:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:56:59: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:56:59:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:56:59:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:56:59:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:56:59:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:56:59:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:02: Failed to decrypt message with any known session...
+2026-05-06 18:57:02: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:02:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:02:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:02:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:02:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:02:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:02: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:02:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:02:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:02:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:02:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:02:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:02: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:02:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:02:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:02:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:02:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:02:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:02: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:02:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:02:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:02:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:02:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:02:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:02: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:02:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:02:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:02:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:02:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:02:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:04: Error: Connection Closed
+2026-05-06 18:57:04:     at sendRawMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\socket.ts:117:10)
+2026-05-06 18:57:04:     at sendNode (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\socket.ts:138:10)
+2026-05-06 18:57:04:     at <anonymous> (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\messages-send.ts:647:10)
+2026-05-06 18:57:04:     at async Object.transaction (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Utils\auth-utils.ts:157:14)
+2026-05-06 18:57:04:     at async relayMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\messages-send.ts:416:3)
+2026-05-06 18:57:04:     at async sendPeerDataOperationMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\messages-send.ts:308:17)
+2026-05-06 18:57:04:     at async sendRetryRequest (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\messages-recv.ts:187:18)
+2026-05-06 18:57:04:     at async <anonymous> (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Socket\messages-recv.ts:830:9)
+2026-05-06 18:57:04:     at async <anonymous> (C:\Users\asus\Desktop\Chat-Neto\node_modules\@whiskeysockets\baileys\src\Utils\make-mutex.ts:18:21) {
+2026-05-06 18:57:04:   data: null,
+2026-05-06 18:57:04:   isBoom: true,
+2026-05-06 18:57:04:   isServer: false,
+2026-05-06 18:57:04:   output: {
+2026-05-06 18:57:04:     statusCode: 428,
+2026-05-06 18:57:04:     payload: {
+2026-05-06 18:57:04:       statusCode: 428,
+2026-05-06 18:57:04:       error: 'Precondition Required',
+2026-05-06 18:57:04:       message: 'Connection Closed'
+2026-05-06 18:57:04:     },
+2026-05-06 18:57:04:     headers: {}
+2026-05-06 18:57:04:   }
+2026-05-06 18:57:04: }
+2026-05-06 18:57:09: Failed to decrypt message with any known session...
+2026-05-06 18:57:09: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:09:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:09:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:09:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:09:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:09:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:09: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:09:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:09:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:09:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:09:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:09:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:09: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:09:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:09:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:09:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:09:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:09:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:09: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:09:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:09:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:09:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:09:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:09:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:09: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:09:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:09:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:09:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:09:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:09:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:10: Failed to decrypt message with any known session...
+2026-05-06 18:57:10: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:10:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:10:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:10:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:10:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:10:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:10: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:10:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:10:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:10:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:10:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:10:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:10: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:10:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:10:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:10:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:10:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:10:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:10: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:10:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:10:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:10:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:10:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:10:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:10: Session error:Error: Bad MAC Error: Bad MAC
+2026-05-06 18:57:10:     at Object.verifyMAC (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\crypto.js:87:15)
+2026-05-06 18:57:10:     at SessionCipher.doDecryptWhisperMessage (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:250:16)
+2026-05-06 18:57:10:     at async SessionCipher.decryptWithSessions (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:147:29)
+2026-05-06 18:57:10:     at async 68174066233404.0 [as awaitable] (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\session_cipher.js:171:28)
+2026-05-06 18:57:10:     at async _asyncQueueExecutor (C:\Users\asus\Desktop\Chat-Neto\node_modules\libsignal\src\queue_job.js:20:29)
+2026-05-06 18:57:11: Closing open session in favor of incoming prekey bundle
+2026-05-06 19:30:27: Claude classify error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Can79Me659Tt6qEt9qpmy"}
+2026-05-06 20:59:54: (node:13616) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-05-06 20:59:54: (Use `node --trace-warnings ...` to show where the warning was created)
